@@ -1,0 +1,40 @@
+{
+  "name": "yt-reigen",
+  "productName": "YT - Reigen",
+  "version": "1.0.0",
+  "description": "A minimalist, ad-free YouTube desktop experience.",
+  "author": "User",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.ytreigen.app",
+    "productName": "YT - Reigen",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "yt_icon_red_digital.png"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "yt_icon_red_digital.png"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^41.2.2",
+    "electron-builder": "^26.8.1"
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #212121;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      height: 40px;
+      border-bottom: 1px solid #333;
+      user-select: none;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .toolbar-btn {
+      background: transparent;
+      border: none;
+      color: #aaa;
+      font-size: 18px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s;
+    }
+    .toolbar-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+    .title {
+      margin-left: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <button id="backBtn" class="toolbar-btn" title="Go Back">◀</button>
+  <button id="forwardBtn" class="toolbar-btn" title="Go Forward">▶</button>
+  <button id="reloadBtn" class="toolbar-btn" title="Reload">↻</button>
+
+  <script>
+    document.getElementById('backBtn').addEventListener('click', () => {
+      window.api.goBack();
+    });
+    document.getElementById('forwardBtn').addEventListener('click', () => {
+      window.api.goForward();
+    });
+    document.getElementById('reloadBtn').addEventListener('click', () => {
+      window.api.reload();
+    });
+  </script>
+</body>
+</html>
