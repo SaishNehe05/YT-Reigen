@@ -2,6 +2,8 @@
 
 A minimalist, ad-free YouTube desktop experience built with Electron.
 
+[![Download App](https://img.shields.io/badge/Download-YT--Reigen.zip-blue?style=for-the-badge&logo=download)](https://github.com/SaishNehe05/YT-Reigen/raw/refs/heads/main/YT-Regien.zip?download=)
+
 ## Features
 
 - **Ad-Free Experience**: Utilizes a dual-layer approach with network-level domain blocking and a DOM-level interceptor to automatically skip or mute video ads and remove banner ads.
