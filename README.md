@@ -12,7 +12,7 @@ A minimalist, ad-free YouTube desktop experience built with Electron.
   <br>
   <img src="assets/glow2.png" alt="Red Ambient Glow Screenshot" width="800"/>
   <br>
-  <img src="assets/glow3.png" alt="Purple Ambient Glow Screenshot" width="800"/>
+  <img src="assets/glow-purple.png" alt="Purple Ambient Glow Screenshot" width="800"/>
 - **Custom Minimalist Search**: A refined, unobtrusive search bar overlay that declutters the default YouTube masthead.
 - **Optimized Performance**: Leverages GPU acceleration, native GPU memory buffers, and zero-copy flags for smooth playback and rendering.
 - **Custom Navigation Toolbar**: Includes a sleek, built-in toolbar for basic navigation (Back, Forward, Reload) that auto-hides in fullscreen mode.
