@@ -419,6 +419,26 @@ function runAdInterceptor() {
       el.style.display = 'none';
     }
   });
+
+  // 4. Handle Anti-Adblock Popup (Enforcement Message)
+  const enforcementMsg = document.querySelector('ytd-enforcement-message-view-model');
+  if (enforcementMsg) {
+    const dialogContainer = enforcementMsg.closest('tp-yt-paper-dialog') || enforcementMsg;
+    dialogContainer.remove();
+    
+    // Remove the dark backdrop
+    document.querySelectorAll('tp-yt-iron-overlay-backdrop').forEach(b => b.remove());
+    
+    // Restore scrolling if locked
+    document.body.style.overflow = '';
+    
+    logInfo('[AdBlock] Removed Anti-Adblock Enforcement Popup');
+
+    const video = player.querySelector('video');
+    if (video && video.paused) {
+      video.play();
+    }
+  }
 }
 
 // Run every 400ms to be slightly less CPU intensive
