@@ -1,4 +1,5 @@
 const { app, BrowserWindow, WebContentsView, ipcMain, session } = require('electron');
+const { autoUpdater } = require('electron-updater');
 const path = require('path');
 
 // GPU acceleration and performance flags
@@ -154,6 +155,16 @@ app.whenReady().then(async () => {
   // Small delay to ensure webRequest handlers are fully registered
   setTimeout(() => {
     createWindow();
+    
+    // Configure and check for updates
+    autoUpdater.on('update-available', () => {
+      console.log('[Updater] Update available.');
+    });
+    autoUpdater.on('update-downloaded', () => {
+      console.log('[Updater] Update downloaded.');
+      // Optional: Prompt the user to install and restart here, or it will happen on next launch
+    });
+    autoUpdater.checkForUpdatesAndNotify();
   }, 500);
 
   app.on('activate', function () {

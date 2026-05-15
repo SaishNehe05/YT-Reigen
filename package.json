@@ -3,7 +3,7 @@
   "productName": "YT - Reigen",
   "version": "1.0.0",
   "description": "A minimalist, ad-free YouTube desktop experience.",
-  "author": "User",
+  "author": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,6 +13,13 @@
   "build": {
     "appId": "com.ytreigen.app",
     "productName": "YT - Reigen",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "SaishNehe05",
+        "repo": "YT-Reigen"
+      }
+    ],
     "directories": {
       "output": "dist"
     },
@@ -30,11 +37,13 @@
     }
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "electron": "^41.2.2",
     "electron-builder": "^26.8.1"
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.3"
   }
 }
